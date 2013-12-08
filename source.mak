@@ -114,6 +114,7 @@ OBJECTS = \
 	routines.$(OBJEXT) \
 	ruby.$(OBJEXT) \
 	scheme.$(OBJEXT) \
+	scss.$(OBJEXT) \
 	sh.$(OBJEXT) \
 	slang.$(OBJEXT) \
 	sml.$(OBJEXT) \

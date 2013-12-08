@@ -15,7 +15,7 @@
 
 typedef enum eScssKinds {
     K_NONE = -1, K_CLASS, K_SELECTOR, K_ID
-} cssKind;
+} ScssKind;
 
 static kindOption ScssKinds [] = {
     { TRUE, 'c', "class", "classes" },
@@ -37,7 +37,7 @@ typedef enum _ScssParserState {  // state of parsing
   P_STATE_AT_END        // end of parsing
 } ScssParserState;
 
-static void makeScssSimpleTag( vString *name, cssKind kind, boolean delete )
+static void makeScssSimpleTag( vString *name, ScssKind kind, boolean delete )
 {
   if (kind == K_CLASS) {
     vStringStripTrailing(name);
@@ -65,7 +65,7 @@ static boolean isScssDeclarationAllowedChar( const unsigned char *cp )
       *cp == '#';   // allow ids 
 }
 
-static ScssParserState parseScssDeclaration( const unsigned char **position, cssKind kind )
+static ScssParserState parseScssDeclaration( const unsigned char **position, ScssKind kind )
 {
   vString *name = vStringNew ();
   const unsigned char *cp = *position;
@@ -221,7 +221,7 @@ static void findScssTags (void)
 /* parser definition */
 extern parserDefinition* ScssParser (void)
 {
-    static const char *const extensions [] = { "css", NULL };
+    static const char *const extensions [] = { "scss", NULL };
     parserDefinition* def = parserNew ("SCSS");
     def->kinds      = ScssKinds;
     def->kindCount  = KIND_COUNT (ScssKinds);

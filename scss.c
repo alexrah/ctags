@@ -1,7 +1,8 @@
 /***************************************************************************
- * css.c
+ * scss.c
  * Character-based parser for Scss definitions
  * Author - Iago Rubio <iagorubio(at)users.sourceforge.net>
+ * Modded by - Alessandro Stoppato
  **************************************************************************/
 #include "general.h"
 

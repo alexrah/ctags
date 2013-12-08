@@ -49,6 +49,7 @@
 	RexxParser, \
 	RubyParser, \
 	SchemeParser, \
+  ScssParser, \
 	ShParser, \
 	SlangParser, \
 	SmlParser, \

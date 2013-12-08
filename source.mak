@@ -48,6 +48,7 @@ SOURCES = \
 	routines.c \
 	ruby.c \
 	scheme.c \
+	scss.c \
 	sh.c \
 	slang.c \
 	sml.c \
